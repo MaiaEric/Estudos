@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 (Regra de 3)</title>
+</head>
+<body>
+    <script>
+        var fraudas = parseFloat(prompt("Quantidade de fraudas produzidas: "))
+        document.write("<br> Total de fraudas: <br>", fraudas)
+        var maquinas = parseFloat(prompt("Numeros de maquinas: "))
+        document.write("<br> Total de maquinas: <br>", maquinas)
+        var fraudas2 = parseFloat(prompt("Informe o numero de fraudas solicitadas: "))
+        document.write("<br> Fraudas adquiridas: <br>", fraudas2)
+        var x = ((maquinas*fraudas2)/fraudas)
+        document.write("<br> A quantidade de maquinas necessarias será de: <br>", x)
+    </script>
+</body>
+</html>

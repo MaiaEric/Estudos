@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 (Regra de 3)</title>
+</head>
+<body>
+    <script>
+        var velocidade = parseFloat(prompt("Informe a velocidade do carro: "))
+        document.write("<br> Velocidade: <br>", velocidade)
+        var tempo = parseFloat(prompt("Informe o Tempo estimado: "))
+        document.write("<br> Tempo: <br>", tempo)
+        var velocidade2 = parseFloat(prompt("Informe a nova velocidade do veiculo: "))
+        document.write("<br> Nova velocidade: <br>", velocidade2)
+        var x = ((velocidade*tempo)/velocidade2)
+        document.write("<br> Estimativa de tempo com a nova velocidade: <br>", x)
+    </script>
+</body>
+</html>

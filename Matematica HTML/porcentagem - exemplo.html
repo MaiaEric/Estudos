@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porcentagem - Exemplo</title>
+    </head>
+    <body>
+        <script>
+            var largura = parseFloat(prompt("Informe a largura do piso: "))
+            document.write("<br> Largura total do piso por metro: ", largura)
+            var comprimento = parseFloat(prompt("Informe o comprimento do piso: "))
+            document.write("<br> Comprimento total do piso por metro: <br>", comprimento)
+            document.write("<br> Medida total por metro quadrado: <br>", largura*comprimento)
+            var quantidade = parseFloat(prompt("Informe a quantidade do produto: "))
+            document.write("<br> Quantidade do produto: <br>", quantidade)
+            var valor = parseFloat(prompt("Informe o valor do produto: "))
+            document.write("<br> Valor do produto: <br>", valor)
+            var total = valor*quantidade
+            document.write("<br> Valor total da compra: <br>", total)
+            var formpagamentos = parseFloat(prompt("Insira a forma de pagamento: "))
+            if (formpagamentos = "dinheiro") {
+            document.write("<br>O cliente ganhará um desconto de: 10%<br>", "<br>valor total da compra será de: <br>", total-total*(10/100))
+        } else if(formpagamentos = "cartão de débito"){ 
+            document.write("<br>O cliente ganhará um desconto de: 15%<br>", "<br>valor total da compra será de: <br>", total-total*(15/100))
+        }  else if (formpagamentos = "cartão de crédito (1 parcela)"){ 
+            document.write("<br>O cliente ganhará nenhum desconto", "<br>valor total da compra será de: <br>", total)
+        } else if (formpagamentos = "cartão de crédito (2 a 3 parcelas)"){ 
+            document.write("<br>O cliente ganhará um juros de 5%:", "<br>valor total da compra será de: <br>", total+total*(5/100))
+        }  else if (formpagamentos = "cartão de crédito (mais de 3 parcelas)"){ 
+            document.write("<br>O cliente ganhará um juros de 8%:<br>", "<br>valor total da compra será de: <br>", total+total*(8/100))
+        }  else  
+            document.write("IMPOSSIVEL APLICAR DESCONTO/JUROS")
+            
+            //switch
+            //
+
+        </script>
+    </body>
+    </html>

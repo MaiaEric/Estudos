@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+   var valor = parseFloat(prompt("Informe o valor investido por Maria:"))
+   document.write("<br> O valor investido é de: <br>", valor)
+   var tempo = parseFloat(prompt("Informe os anos determinados: "))
+   document.write("<br> A quantidade de anos: <br>", tempo)
+   var juros = parseFloat(prompt("Informe a taxa de juros que Maria terá que pagar:")) 
+   document.write("<br>O juros será de: <br>", juros)
+   var total = valor*(1+juros/100)**tempo
+   document.write("<br> O valor total do montante de Maria é: <br>", total)
+    </script>
+</body>
+</html>

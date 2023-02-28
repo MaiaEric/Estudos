@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 (Regra de 3 composta)</title>
+</head>
+<body>
+    <script>
+        var Capacidade = parseFloat(prompt("Capacidade: "))//900
+        document.write("<br> Capacidade Total: <br>", Capacidade)
+        var ralos = parseFloat(prompt("Numeros de ralos: "))//6
+        document.write("<br> Total de ralos: <br>", ralos)
+        var horas = parseFloat(prompt("Quantidade de horas: "))//6
+        document.write("<br> Total de horas percorridas: <br>", horas)
+        var Capacidade2 = parseFloat(prompt("Informe o numero da Capacidade do segundo reservatorio: "))//500
+        document.write("<br> Total da Capacidade remesa: <br>", Capacidade2)
+        var horas2 = parseFloat(prompt("Informe a quantidade de horas necessarias pra o 2 reservatorio: "))//4
+        document.write("<br> Total de horas necessarias: <br>", horas2)
+        var x = (Capacidade*ralos)
+        document.write("<br> Total da primeira remesa: <br>", x)
+        var y = (Capacidade2*horas2)
+        document.write("<br> Total da segunda remesa: <br>", y)
+        var total = ((horas*y)/x)
+        document.write("<br> A quantidade de ralos necessarios para o 2 reservatorio de agua serão de: <br>", total)
+    </script>
+</body>
+</html>

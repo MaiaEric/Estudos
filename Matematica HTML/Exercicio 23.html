@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 (Regra de 3 composta)</title>
+</head>
+<body>
+    <script>
+        var torneiras = parseFloat(prompt("Torneiras: "))//4
+        document.write("<br> Total de torneiras: <br>", torneiras)
+        var horas = parseFloat(prompt("Numeros de horas: "))//10
+        document.write("<br> Total de horas: <br>", horas)
+        var tanque = parseFloat(prompt("Quantidade de tanques que conseguem encher: "))//1
+        document.write("<br> Total de tanques: <br>", tanque)
+        var torneiras2 = parseFloat(prompt("Informe o numero de torneiras da segunda remeça: "))//7
+        document.write("<br> Total da segunda remesa: <br>", torneiras2)
+        var tanques2 = parseFloat(prompt("Informe a quantidade de tanques da 2 remesa: "))//2
+        document.write("<br> Total de tanques informados: <br>", tanques2)
+        var x = (torneiras*horas*tanque)
+        document.write("<br> Total da primeira remesa: <br>", x)
+        var y = (tanques2*torneiras2)
+        document.write("<br> Total da segunda remesa: <br>", y)
+        var total = ((horas*y)/x)
+        document.write("<br> vai demorar estas quantidade de hotas para encher 2 tanques: <br>", total)
+    </script>
+</body>
+</html>

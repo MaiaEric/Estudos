@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7 (Regra de 3 composta)</title>
+</head>
+<body>
+    <script>
+        var impressoras = parseFloat(prompt("Impressoras: "))//4
+        document.write("<br> Total de impressoras: <br>", impressoras)
+        var panfletos = parseFloat(prompt("Numeros de panfletos: "))//800
+        document.write("<br> Total de panfletos: <br>", panfletos)
+        var horas = parseFloat(prompt("Quantos minutos levaram para imprimir: "))//40
+        document.write("<br> Minutos: <br>", horas)
+        var horas2 = parseFloat(prompt("Informe os minutos que levaram pra concluir a segunda remeça: "))//60
+        document.write("<br> Total da segunda remesa: <br>", horas2)
+        var impressoras2 = parseFloat(prompt("Informe a quantidade impressoras utilizadas na 2 remesa: "))//6
+        document.write("<br> Total de impressoras informados: <br>", impressoras2)
+        var x = (impressoras*horas*panfletos)
+        document.write("<br> Total da primeira remesa: <br>", x)
+        var y = (horas2*impressoras2)
+        document.write("<br> Total da segunda remesa: <br>", y)
+        var total = ((panfletos*y)/x)
+        document.write("<br> A quantidade de pnaletos produzidos será de: <br>", total)
+    </script>
+</body>
+</html>

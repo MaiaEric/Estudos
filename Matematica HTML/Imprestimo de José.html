@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    <script>
+   var valor = parseFloat(prompt("Informe o valor do imprestimo feito por José:"))
+   document.write("<br> O valor do imprestimo é de: <br>", valor)
+   var tempo = parseFloat(prompt("Informe os anos determinados: "))
+   document.write("<br> A quantidade de anos: <br>", tempo)
+   var juros = parseFloat(prompt("Informe a taxa de juros que do emprestimo de José:")) 
+   document.write("<br>O juros será de: <br>", juros)
+   var total = valor*(1+juros/100)**tempo
+   document.write("<br> O valor total do montante de José é: <br>", total)
+    </script>
+</body>
+</html>

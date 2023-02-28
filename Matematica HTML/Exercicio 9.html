@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    <script>
+   var tempo = parseFloat(prompt("Informe a parcela aplicada: "))
+   document.write("<br> A quantidade da parcela: <br>", tempo)
+   var juros = parseFloat(prompt("Informe a taxa de juros cobrada:"))
+   document.write("<br>Os juros será de: <br>", juros)
+   var montante = parseFloat(prompt("Informe o montante: "))
+   document.write("<br> O Valor do montante é de: <br>", montante)
+   var capital = (montante-(tempo/(juros/100)))
+document.write("<br> O valor da capital aplicada é de: <br>", capital)
+    </script>
+</body>
+</html>

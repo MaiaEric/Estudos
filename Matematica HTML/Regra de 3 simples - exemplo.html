@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra de 3 (simples)</title>
+</head>
+<body>
+    <script>
+        var funcionarios = parseFloat(prompt("Numero de funcionarios atualmente: "))
+        document.write("<br> Total de funcionarios: <br>", funcionarios)
+        var papeis = parseFloat(prompt("Numeros de papeis: "))
+        document.write("<br> Total de papeis: <br>", papeis)
+        var funcionarios2 = parseFloat(prompt("Informe o numero de funcionarios pretendidos: "))
+        document.write("<br> Funcionarios pretendido pro serviço: <br>", funcionarios2)
+        var x = ((funcionarios2*papeis)/funcionarios)
+        document.write("<br> A quantidade de funcionarios necessarios pro serviço é de: <br>", x)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemrcicio 4 (Regra de 3 composta)</title>
+</head>
+<body>
+    <script>
+        var maquinas = parseFloat(prompt("Maquinas: "))//5
+        document.write("<br> Total de maquinas: <br>", maquinas)
+        var peças = parseFloat(prompt("Numeros de peças: "))//260
+        document.write("<br> Total de peças: <br>", peças)
+        var dias = parseFloat(prompt("Dias de produção: "))//5
+        document.write("<br> Total de dias: <br>", dias)
+        var horas = parseFloat(prompt("Horas de produção: "))//4
+        document.write("<br> Total de horas: <br>", horas)
+        var maquinas2 = parseFloat(prompt("Informe o numero de maquinas da segunda remeça: "))//3
+        document.write("<br> Total da segunda remesa: <br>", maquinas2)
+        var dias2 = parseFloat(prompt("Informe a quantidade de dias necessarias pra a 2 remesa: "))//10
+        document.write("<br> Total de dias necessarias: <br>", dias2)
+        var horas2 = parseFloat(prompt("Informe a quantidade de horas necessarias pra a 2 remesa: "))//10
+        document.write("<br> Total de horas necessarias: <br>", horas2)
+        var x = (maquinas*peças*dias*horas)
+        document.write("<br> Total da primeira remesa: <br>", x)
+        var y = (maquinas2*dias2*horas2)
+        document.write("<br> Total da segunda remesa: <br>", y)
+        var total = ((peças*y)/x)
+        document.write("<br> A quantidade de peças que será produzidas será de: <br>", total)
+    </script>
+</body>
+</html>

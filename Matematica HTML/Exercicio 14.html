@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 (Regra de 3)</title>
+</head>
+<body>
+    <script>
+        var produto = parseFloat(prompt("Quantidade do determinado produto: "))
+        document.write("<br> Total: <br>", produto)
+        var dias = parseFloat(prompt("Dias de venda: "))
+        document.write("<br> Total de dias: <br>", dias)
+        var produto2 = parseFloat(prompt("Informe a nova quantidade de produto: "))
+        document.write("<br> Nova quantidade do produto: <br>", produto2)
+        var x = ((produto2*dias)/produto)
+        document.write("<br> A quantidade de dias que vai demorar vai ser: <br>", x)
+    </script>
+</body>
+</html>

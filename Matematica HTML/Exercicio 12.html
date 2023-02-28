@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2(Regra de 3)</title>
+</head>
+<body>
+    <script>
+        var bolos = parseFloat(prompt("Numero de bolos encomendados: "))
+        document.write("<br> Total de bolos: <br>", bolos)
+        var limão = parseFloat(prompt("Numeros de limões: "))
+        document.write("<br> Total de limões: <br>", limão)
+        var bolos2 = parseFloat(prompt("Informe o numero da nova incomenda de bolos: "))
+        document.write("<br> Bolos incomendados: <br>", bolos2)
+        var x = ((bolos2*limão)/bolos)
+        document.write("<br> A quantidade de bolos feitos para a nova incomenda: <br>", x)
+    </script>
+</body>
+</html>
