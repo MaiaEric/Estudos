@@ -1,0 +1,32 @@
+package br.com.tecinfo.gerenciador;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/NovaEmpresa")
+
+public class NovaEmpresaServlet extends HttpServlet {
+
+		protected void doPost(HttpServletRequest request, HttpServletResponse response){
+		System.out.println("Cadastrando nova Empresa...");
+		
+		String nomeempresa = request.getParameter("empresa");
+		String nomeContato = request.getParameter("contato");
+		String senha = request.getParameter("senha");
+		
+		printWritter out = response.getWritter();
+		out.println("<html><body></body><html>"
+					+"Empresa: "+ nomeEmpresa +""
+					+ "Contato: "+nomeContato+ ""
+					+"Senha: "+ senha+"<body></body></html>");
+		
+		
+		
+	}
+
+}

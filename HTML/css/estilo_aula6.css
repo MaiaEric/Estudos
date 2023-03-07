@@ -1,0 +1,50 @@
+
+
+/*Alinhando os elementos dentro da header*/
+/*AREA DO HEADER PRINCIPAL*/
+
+
+
+/*AREA DO NAV PRINCIPAL*/
+#menuprincipal{
+    /*background-color: red;*/
+    padding: 0;
+    height: 60px;
+}
+
+#secaoprincipal{
+    background-color: green;
+    min-height: 700px;
+
+}
+
+#asideprincipal{
+    background-color: yellow;
+    min-height: 500px;
+}
+
+#rodapeprincipal{
+    background-color:grey;
+    height: 160px;
+}
+
+
+/*Formatando a repsonsidade de alguns itens*/
+
+@media screen and (max-width: 576px){
+    #cabecalhoprincipal{
+       height: 100px;
+    }
+  
+    #carouselExampleIndicators img{
+        
+        height: 100px;
+    }
+
+}
+
+
+
+
+
+

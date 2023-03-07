@@ -1,0 +1,242 @@
+CLIENTE:
+
+INSERT INTO tb_cliente (tipoLogadouro, logadouro, numero, complemento, bairro, municipio, estado, cep, nomecliente, idcliente, telefone, cpfcliente)
+ VALUES ('rua', 'R. Ametista', 0, 'L: 18 Q:54', 'Coelho da Rocha', 'Parque Alian', 'Rio de Janeiro', '25550-460', 'Eric', NULL, '979555210', cpfcliente);
+=========================================================================
+
+DEPARTAMENTO:
+
+INSERT INTO tb_departamento (iddepartamento, nomedepartamento) VALUES (NULL, 'T.I');
+
+=========================================================================
+
+INSERT INTO tb_pedido (idpedido, dtcompra, idcliente, idfuncionario)
+ VALUES (null, now(), 51,2);
+
+=========================================================================
+
+SELECT idcliente, nomecliente, estado FROM tb_cliente
+WHERE idcliente <= 100 AND >=10;
+
+=========================================================================
+
+SELECT idcliente, nomecliente, estado FROM tb_cliente
+WHERE idcliente <= 100 OR >=10;
+
+=========================================================================
+
+UPDATE tb_filme SET preco =40.14
+WHERE idFilme=2;
+
+=========================================================================
+
+create TABLE tb_fornecedor (
+    telefone1 varchar(30) NOT NULL,
+    telefone2 varchar(30),
+    telefone3 varchar(30),
+    nomeGerente varchar(100) NOT NULL,
+    municipioFornecedor varchar(100) NOT NULL,
+    bairroFornecedor varchar(100) NOT NULL,
+    tipoLogradouro varchar(100) NOT NULL,
+    complementoFornecedor varchar(100) NOT NULL,
+    numero int(10) NOT NULL,
+    logradouroFornecedor varchar(50) NOT NULL,
+    estadoFornecedor varchar(50) NOT NULL,
+    cepFornecedor varchar(50) NOT NULL,
+    cnpjFornecedor varchar(20) NOT NULL UNIQUE,
+    idfornecedor int PRIMARY key AUTO_INCREMENT);     
+
+=========================================================================
+
+CREATE TABLE tb_filme(
+	idFilme INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nomefilme VARCHAR(40) NOT NULL,
+     nomediretor VARCHAR(40) NOT NULL,
+     categoria VARCHAR(40) NOT NULL,
+     qtestoque VARCHAR(40) NOT NULL,
+       idfornecedor INT NOT NULL,
+   FOREIGN KEY (idfornecedor) REFERENCES tb_fornecedor(idfornecedor)
+)ENGINE=INNODB;
+
+=========================================================================
+
+SELECT *
+FROM tb_filme AS Fi
+JOIN tb_fornecedor AS FO
+WHERE fi.idFornecedor = fo.idFornecedor;
+
+SELECT *
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor = tb_fornecedor.idFornecedor;
+
+=========================================================================
+
+SELECT nomecliente, nomeFilme
+FROM tb_cliente
+JOIN tb_pedido, tb_filme
+WHERE tb_cliente.idcliente = tb_pedido.idcliente;
+
+=========================================================================
+
+****DESAFIO***
+SELECT idcliente FROM tb_pedido 
+WHERE idcliente NOT IN (SELECT idcliente FROM tb_pedido);
+
+SELECT idpedido, SUM(preco) FROM tb_filme 
+GROUP BY idpedido;
+
+****JOIN***
+
+SELECT *
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor = tb_fornecedor.idFornecedor;
+
+SELECT nomeFilme, nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor = tb_fornecedor.idFornecedor;
+
+SELECT nomeFilme, nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor = tb_fornecedor.idFornecedor=1;
+
+SELECT nomefuncionario, nomedepartamento
+FROM tb_funcionario
+JOIN tb_departamento
+ON tb_departamento.iddepartamento=tb_funcionario.iddepartamento
+AND tb_departamento.iddepartamento=2;
+
+****INNER JOIN***
+
+SELECT dtcompra, nomecliente, nomefuncionario
+FROM tb_pedido
+JOIN tb_fornecedor, tb_cliente
+ON tb_cliente.idcliente = tb_pedido.idcliente;
+
+SELECT dtcompra, nomecliente, nomefuncionario
+FROM tb_pedido
+JOIN tb_funcionario, tb_cliente
+ON tb_cliente.idcliente = tb_pedido.idcliente
+ORDER BY nomefuncionario;
+
+=================================================================
+
+1- Consultar as tabelas de filme e fornecedor e retornar os dados relativos aos filmes e aos fornecedores ao mesmo tempo.
+
+SELECT *
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=tb_fornecedor.idFornecedor;
+
+2- Selecione o nome do filme e o nome do fornecedor
+SELECT nomeFilme,nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=tb_fornecedor.idFornecedor;
+
+3- Selecione o nome do filme e o nome do fornecedor de id igual a 1
+SELECT nomeFilme,nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=1 AND tb_fornecedor.idFornecedor=1;
+
+4- Selecione o nome do funcionário e o nome do departamento dos funcionários que trabalham no departamento X
+SELECT nomeFuncionario,nomeDepartamento
+FROM tb_funcionario
+JOIN tb_departamento  
+WHERE tb_funcionario.iddepartamento=2;
+
+5- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_filme
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idcliente
+
+6- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário ordenado pelo nome do funcionário
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_filme
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idcliente
+ORDER BY nomeFuncionario;
+
+7- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário cujo o id do pedido seja igual a 3
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idCliente
+INNER JOIN tb_filme
+ON tb_pedido.idpedido = 1;
+
+8- Quais clientes não efetuaram compras
+SELECT COUNT(idcliente)
+from tb_cliente
+WHERE idcliente not in (SELECT idcliente FROM tb_pedido)
+
+9- Fazer a soma do valor total de cada pedido
+SELECT idpedido,SUM(preco)
+FROM tb_itenspedido
+GROUP by idpedido;
+
+==============================================================================
+
+CREATE VIEW vw_consultabairro AS
+SELECT *
+FROM cliente
+WHERE bairro = "centro"
+
+==============================================================================
+
+UPDATE tb_filme
+set tb_filme.qtestoque = tb_filme.qtestoque - new.qtpedido
+WHERE tb_filme.idFilme = new.idFilme
+
+UPDATE tb_filme
+set tb_filme.qtestoque = tb_filme.qtestoque - old.qtpedido
+WHERE tb_filme.idFilme = old.idfilme
+
+=============================================================================
+
+CREATE TABLE IF NOT EXISTS `situacoes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE IF NOT EXISTS `niveis_acessos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(240) NOT NULL,
+  `email` varchar(240) NOT NULL,
+  `senha` varchar(240) NOT NULL,
+  `situacoe_id` int(11) NOT NULL,
+  `niveis_acesso_id` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`) VALUES
+(1, 'Eric Maia', 'erica36silva@gmail.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-03-25 01:01:01', NULL)

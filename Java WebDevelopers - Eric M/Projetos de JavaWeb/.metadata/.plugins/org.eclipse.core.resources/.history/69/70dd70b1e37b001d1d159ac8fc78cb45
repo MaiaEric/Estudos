@@ -1,0 +1,13 @@
+package br.com.Projeto1.servlet;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class NovoProjetoServlet
+ */
+@WebServlet("/NovoProjeto")
+public class NovoProjetoServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+}

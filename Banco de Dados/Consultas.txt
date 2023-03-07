@@ -1,0 +1,66 @@
+1- Consultar as tabelas de filme e fornecedor e retornar os dados relativos aos filmes e aos fornecedores ao mesmo tempo.
+
+SELECT *
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=tb_fornecedor.idFornecedor;
+
+2- Selecione o nome do filme e o nome do fornecedor
+SELECT nomeFilme,nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=tb_fornecedor.idFornecedor;
+
+3- Selecione o nome do filme e o nome do fornecedor de id igual a 1
+SELECT nomeFilme,nomeFornecedor
+FROM tb_filme
+JOIN tb_fornecedor
+WHERE tb_filme.idFornecedor=1 AND tb_fornecedor.idFornecedor=1;
+
+4- Selecione o nome do funcionário e o nome do departamento dos funcionários que trabalham no departamento X
+SELECT nomeFuncionario,nomeDepartamento
+FROM tb_funcionario
+JOIN tb_departamento  
+WHERE tb_funcionario.iddepartamento=2;
+
+5- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_filme
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idcliente
+
+6- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário ordenado pelo nome do funcionário
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_filme
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idcliente
+ORDER BY nomeFuncionario;
+
+7- Selecione a data da compra, o nome do cliente, o nome do filme e o nome do funcionário cujo o id do pedido seja igual a 3
+SELECT dtcompra,nomeCliente,nomeFilme,nomeFuncionario
+FROM tb_pedido
+INNER JOIN tb_funcionario
+INNER JOIN tb_itenspedido
+ON tb_pedido.idpedido = tb_itenspedido.iditenspedido
+INNER JOIN tb_cliente
+ON tb_pedido.idcliente = tb_cliente.idCliente
+INNER JOIN tb_filme
+ON tb_pedido.idpedido = 1;
+
+8- Quais clientes não efetuaram compras
+SELECT COUNT(idcliente)
+from tb_cliente
+WHERE idcliente not in (SELECT idcliente FROM tb_pedido)
+
+9- Fazer a soma do valor total de cada pedido
+SELECT idpedido,SUM(preco)
+FROM tb_itenspedido
+GROUP by idpedido;

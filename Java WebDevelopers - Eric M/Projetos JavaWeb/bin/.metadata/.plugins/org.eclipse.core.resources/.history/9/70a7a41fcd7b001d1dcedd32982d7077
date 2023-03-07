@@ -1,0 +1,33 @@
+package br.com.tecinfo.servlet;
+
+public class Empresa {
+public int id;
+private String nomeEmpresa;
+private String nomeContato;
+private String Senha;
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getEmpresa() {
+	return nomeEmpresa;
+}
+public void setEmpresa(String empresa) {
+	nomeEmpresa = empresa;
+}
+public String getContato() {
+	return nomeContato;
+}
+public void setContato(String contato) {
+	nomeContato = contato;
+}
+public String getSenha() {
+	return Senha;
+}
+public void setSenha(String senha) {
+	Senha = senha;
+}
+
+}

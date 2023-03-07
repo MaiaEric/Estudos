@@ -1,0 +1,62 @@
+
+
+/*Alinhando os elementos dentro da header*/
+/*AREA DO HEADER PRINCIPAL*/
+#cabecalhoprincipal{
+    /*background-color: aqua;*/
+    padding: 0;
+    height: 200px;
+}
+
+/*
+#cabecalhoprincipal img{
+    border-radius: 20%;
+}
+*/
+
+/*AREA DO NAV PRINCIPAL*/
+#menuprincipal{
+    /*background-color: red;*/
+    padding: 0;
+    height: 60px;
+}
+
+#secaoprincipal{
+    background-color: green;
+    min-height: 400px;
+
+}
+
+#asideprincipal{
+    background-color: yellow;
+    min-height: 400px;
+}
+
+#rodapeprincipal{
+    background-color:#fff;
+    height: 100vh;
+}
+
+.menuesqrodape li{
+    list-style: none;
+}
+
+/*Formatando a repsonsidade de alguns itens*/
+
+@media screen and (max-width: 576px){
+    #cabecalhoprincipal{
+       height: 100px;
+    }
+  
+    #carouselExampleIndicators img{
+        
+        height: 100px;
+    }
+
+}
+
+
+
+
+
+

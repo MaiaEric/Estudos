@@ -1,0 +1,51 @@
+Selecione todos os campos da tabela cliente;
+
+SELECT tipoLogadouro, logadouro, numero, complemento, bairro, municipio, estado, cep, nomecliente, idcliente, telefone, cpfcliente
+ FROM tb_cliente;
+
+Conte o número de clientes da tabela cliente:
+
+SELECT count(idcliente) FROM tb_cliente;
+
+Selecione nome e telefone da tabela cliente e ordene o resultado pelo campo nome:
+
+SELECT telefone,nomecliente FROM tb_cliente
+ORDER BY nomecliente;
+
+Conte o número de clientes(sem repetição) que já fizeram compras:
+
+SELECT count(idpedido) FROM tb_pedido;
+
+Conte o numero de compras efetuadas entre uma data e outra;
+
+SELECT count(dtcompra) FROM tb_pedido;
+
+
+selecione o número de compras feitas pelo cliente x:
+
+SELECT idcliente, numcompras FROM tb_pedido
+WHERE idcliente = '51';
+
+
+selecione o número de compras feitas pelo cliente x dentro de um intervalo de tempo:
+
+SELECT idcliente, dtcompra FROM tb_pedido
+WHERE idcliente = '51';
+
+inserir uma nova coluna na tabela compra conforme exemplo abaixo
+alter table compra add COLUMN valorFilme decimal(6,2) not null;
+
+Selecionar os filmes comprados por cada cliente:
+
+SELECT idfilme, idcliente FROM tb_itenspedido;
+
+Contar o número de filmes comprados por cada cliente:
+
+SELECT count(iditenspedido) FROM tb_itenspedido;
+
+Adicionar a FK na tabela compra conforme exemplo abaixo
+ALTER TABLE compra add idFuncionario int not null;
+
+UPDATE compra SET idFuncionario=1;
+
+ALTER TABLE compra ADD FOREIGN KEY (idFuncionario) REFERENCES funcionario(idFuncionario);

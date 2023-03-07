@@ -1,0 +1,57 @@
+
+
+/*Alinhando os elementos dentro da header*/
+/*AREA DO HEADER PRINCIPAL*/
+#cabecalhoprincipal{
+    background-color: aqua;
+    height: 200px;
+}
+
+#cabecalhoprincipal figure img{
+   width: 70%;
+   height: 200px;
+}
+#cabecalhoprincipal h1{
+   padding: 50px 50px;
+}
+/*AREA DO NAV PRINCIPAL*/
+#menuprincipal{
+    background-color: red;
+    height: 60px;
+}
+
+#secaoprincipal{
+    background-color: green;
+    min-height: 400px;
+
+}
+
+#asideprincipal{
+    background-color: yellow;
+    min-height: 400px;
+}
+
+#rodapeprincipal{
+    background-color:grey;
+    height: 60px;
+}
+
+
+/*Formatando a repsonsidade de alguns itens*/
+
+@media screen and (max-width: 576px){
+    #cabecalhoprincipal{
+       height: 100px;
+    }
+    #cabecalhoprincipal figure img{
+        max-width: 15%;
+        height: 100px;
+    }
+
+}
+
+
+
+
+
+

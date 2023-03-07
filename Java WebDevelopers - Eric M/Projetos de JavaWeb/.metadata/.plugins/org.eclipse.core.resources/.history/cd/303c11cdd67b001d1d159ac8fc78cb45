@@ -1,0 +1,8 @@
+package br.com.Projeto1.servlet;
+
+public class OiMundoServlet {
+	public class OiMundoServlet extends HttpServlet {
+
+	}
+
+}

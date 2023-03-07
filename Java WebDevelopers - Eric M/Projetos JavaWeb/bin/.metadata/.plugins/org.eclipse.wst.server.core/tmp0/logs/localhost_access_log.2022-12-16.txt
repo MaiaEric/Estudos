@@ -1,0 +1,15 @@
+127.0.0.1 - - [16/Dec/2022:13:29:19 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:31:23 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:31:23 -0300] "GET /favicon.ico HTTP/1.1" 404 774
+127.0.0.1 - - [16/Dec/2022:13:31:40 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:41 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:41 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:43 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+127.0.0.1 - - [16/Dec/2022:13:36:52 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:55 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:55 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:36:55 -0300] "GET /gerenciador/novaempresa HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:37:30 -0300] "GET /gerenciador/flmnovaempresa.html HTTP/1.1" 200 883
+127.0.0.1 - - [16/Dec/2022:13:37:59 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:37:59 -0300] "GET /gerenciador/flmnovaempresa.html HTTP/1.1" 200 602
+0:0:0:0:0:0:0:1 - - [16/Dec/2022:13:38:14 -0300] "GET /gerenciador/flmnovaempresa.html?empresa=Jacinto&contato=1241155b135&senha=%26ricX2004 HTTP/1.1" 200 602

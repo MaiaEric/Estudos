@@ -1,0 +1,10 @@
+package br.com.tecinfo.servlet;
+
+public class Empresa {
+public int id;
+private String Empresa;
+private String Contato;
+private String Senha
+
+;
+}

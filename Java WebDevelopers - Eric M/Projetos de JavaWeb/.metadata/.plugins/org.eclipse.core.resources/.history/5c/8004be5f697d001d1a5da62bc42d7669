@@ -1,0 +1,28 @@
+package br.com.Projeto1.servlet;
+
+public class Loja {
+	public int id;
+	private String nomeloja;
+	private String nomefilme;
+	private String codigo;
+	public String getNomeloja() {
+		return nomeloja;
+	}
+	public void setNomeloja(String nomeloja) {
+		this.nomeloja = nomeloja;
+	}
+	public String getNomefilme() {
+		return nomefilme;
+	}
+	public void setNomefilme(String nomefilme) {
+		this.nomefilme = nomefilme;
+	}
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+
+}

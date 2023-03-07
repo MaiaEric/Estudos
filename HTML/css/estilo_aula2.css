@@ -1,0 +1,44 @@
+
+
+/*Alinhando os elementos dentro da header*/
+#cabecalhoprincipal{
+    background-color: aqua;
+    height: 200px;
+}
+
+#menuprincipal{
+    background-color: red;
+    height: 60px;
+}
+
+#secaoprincipal{
+    background-color: green;
+    min-height: 400px;
+
+}
+
+#asideprincipal{
+    background-color: yellow;
+    min-height: 400px;
+}
+
+#rodapeprincipal{
+    background-color:grey;
+    height: 60px;
+}
+
+
+/*Formatando a repsonsidade de alguns itens*/
+
+@media screen and (max-width: 576px){
+    #cabecalhoprincipal{
+       height: 100px;
+    }
+
+}
+
+
+
+
+
+

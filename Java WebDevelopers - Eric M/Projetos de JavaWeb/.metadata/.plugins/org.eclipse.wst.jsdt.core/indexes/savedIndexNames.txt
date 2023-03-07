@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\Java WebDevelopers - Eric M\apache-tomcat-9.0.65-windows-x64\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+783769529.index
+3016067998.index
+680055729.index
+2521551783.index
+118516948.index
+1735010392.index
